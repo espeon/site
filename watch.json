@@ -1,0 +1,9 @@
+{
+  "install": {
+    "include": ["package.json"]
+  },
+  "restart": {
+    "include": [".env", ".babelrc", "next.config.js"]
+  },
+  "throttle": 250
+}
