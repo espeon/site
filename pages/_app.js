@@ -21,6 +21,7 @@ export default function MyApp(props) {
     <React.Fragment>
       <Head>
         <title>Emma L.</title>
+        <meta name="Description" content="Put your description here." />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
