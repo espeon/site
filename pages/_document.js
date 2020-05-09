@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" />
           <meta name="Description" content="Emma's cool site.">
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet" async></link>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet" media="all" async></link>
         </Head>
         <body>
           <Main />
