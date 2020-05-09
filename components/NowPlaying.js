@@ -11,6 +11,8 @@ export default function NowPlaying() {
   const { data, error } = useSWR("/api/lastfm", fetcher, {
     refreshInterval: 60000
   });
+  
+  if(error) return null
 
   const artist = data && data.recenttracks.track[0].artist["#text"];
   let musictitle = data && data.recenttracks.track[0].name;
@@ -37,7 +39,6 @@ export default function NowPlaying() {
       )}
 
       <style jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600&display=swap");
         .title {
           color: #000;
           font-size: 30px;
