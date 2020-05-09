@@ -64,14 +64,14 @@ export default function Index() {
         <MuiLink
           color="inherit"
           href="https://github.com/notkanbaru"
-          for="cool"
+          aria-label="cool"
         >
           <FontAwesomeIcon icon={faGithub} size="2x" className={classes.icon} />
         </MuiLink>
         <MuiLink
           color="inherit"
           href="https://open.spotify.com/user/e6u90juw2fdu50glerxrj90j6"
-          for="cool"
+          aria-label="cool"
         >
           <FontAwesomeIcon
             icon={faSpotify}
@@ -79,7 +79,7 @@ export default function Index() {
             className={classes.icon}
           />
         </MuiLink>
-        <MuiLink color="inherit" for="cool" href="https://audius.co/kanbaru">
+        <MuiLink color="inherit" aria-label="cool" href="https://audius.co/kanbaru">
           <img
             height={25}
             className={classes.audius}
@@ -89,7 +89,7 @@ export default function Index() {
         </MuiLink>
         <MuiLink
           color="inherit"
-          for="cool"
+          aria-label="cool"
           href="https://twitter.com/notkanbaru"
         >
           <FontAwesomeIcon
@@ -100,7 +100,7 @@ export default function Index() {
         </MuiLink>
         <MuiLink
           color="inherit"
-          for="cool"
+          aria-label="cool"
           href="https://instagram.com/notkanbaru"
         >
           <FontAwesomeIcon
