@@ -56,16 +56,22 @@ export default function Index() {
         color="initial"
         align="center"
         style={{ paddingTop: "20px" }}
+        id="cool"
       >
         i do stuff with rust and js and some other things.
       </Typography>
       <Grid container justify="center" alignItems="center">
-        <MuiLink color="inherit" href="https://github.com/notkanbaru">
+        <MuiLink
+          color="inherit"
+          href="https://github.com/notkanbaru"
+          for="cool"
+        >
           <FontAwesomeIcon icon={faGithub} size="2x" className={classes.icon} />
         </MuiLink>
         <MuiLink
           color="inherit"
           href="https://open.spotify.com/user/e6u90juw2fdu50glerxrj90j6"
+          for="cool"
         >
           <FontAwesomeIcon
             icon={faSpotify}
@@ -73,21 +79,30 @@ export default function Index() {
             className={classes.icon}
           />
         </MuiLink>
-        <MuiLink color="inherit" href="https://audius.co/kanbaru">
+        <MuiLink color="inherit" for="cool" href="https://audius.co/kanbaru">
           <img
             height={25}
             className={classes.audius}
             src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MzEgNDYwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MzEgNDYwIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojMjAyMDIwO308L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MTguMyA0NjMuOGM5LjcgMCAxNS44LTEwLjUgMTEtMTlsLTEyNi40LTIxOS4yLTEyNi40LTIxOS4zYy00LjktOC40LTE3LTguNC0yMS45IDBsLTEyNi43IDIxOS4xLTUxLjggODkuNWMtNC45IDguNCAxLjIgMTkgMTAuOSAxOWw5Ny44LjFjNC41IDAgOC43LTIuNCAxMS02LjNsNTguNi0xMDEuM2M0LjktOC40IDE3LjEtOC40IDIxLjkgMGw2Mi41IDEwOC40YzQuOSA4LjQtMS4yIDE5LTExIDE5bC0xMTUtLjFjLTQuNSAwLTguNyAyLjQtMTEgNi4zbC00OC45IDg0LjdjLTQuOSA4LjQgMS4yIDE5IDEwLjkgMTlsMTAxLjQuMWgyNTMuMXoiLz48L3N2Zz4="
+            alt="Audius icon"
           />
         </MuiLink>
-        <MuiLink color="inherit" href="https://twitter.com/notkanbaru">
+        <MuiLink
+          color="inherit"
+          for="cool"
+          href="https://twitter.com/notkanbaru"
+        >
           <FontAwesomeIcon
             icon={faTwitter}
             size="2x"
             className={classes.icon}
           />
         </MuiLink>
-        <MuiLink color="inherit" href="https://instagram.com/notkanbaru">
+        <MuiLink
+          color="inherit"
+          for="cool"
+          href="https://instagram.com/notkanbaru"
+        >
           <FontAwesomeIcon
             icon={faInstagram}
             size="2x"

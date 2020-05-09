@@ -9,15 +9,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Inter:200,300,400,500,700&display=swap"
-          />
-          <link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet" async/>
         </Head>
         <body>
           <Main />
