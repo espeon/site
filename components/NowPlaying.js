@@ -28,7 +28,7 @@ export default function NowPlaying() {
           : "my last played song:"}
       </Typography>
       <div className="title">
-        <MuiLink color="inherit" href={data && data.recenttracks.track[0].url}>
+        <MuiLink color="inherit" href={data && data.recenttracks.track[0].url} color="textPrimary" >
           {musictitle.toLowerCase()}
         </MuiLink>
       </div>

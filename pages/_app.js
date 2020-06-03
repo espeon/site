@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../src/theme';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import  '../styles.css';
 
 export default function MyApp(props) {
@@ -16,6 +16,27 @@ export default function MyApp(props) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+  
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  
+  const theme = createMuiTheme({
+  typography: {
+    "fontFamily": "\"Inter\", \"Noto Sans JP\", \"Roboto\", \"Arial\", sans-serif",
+    "fontSize": 14,
+    "fontWeightLight": 200,
+    "fontWeightRegular": 300,
+    "fontWeightMedium": 400,
+   },
+  palette: {
+    type: prefersDarkMode ? 'dark' : 'light',
+    primary: {
+      main: '#556cd6',
+    },
+    secondary: {
+      main: '#19857b',
+    },
+  },
+});
 
   return (
     <React.Fragment>
