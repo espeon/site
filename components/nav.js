@@ -1,29 +1,17 @@
-import Link from 'next/link'
-
-const links = [
-  { href: 'https://github.com/vercel/next.js', label: 'GitHub' },
-  { href: 'https://nextjs.org/docs', label: 'Docs' },
-]
+import DarkMode from "./dark-mode"
 
 export default function Nav() {
   return (
-    <nav>
-      <ul className="flex justify-between items-center p-8">
-        <li>
-          <Link href="/">
-            <a className="text-blue-500 no-underline">Home</a>
-          </Link>
-        </li>
-        <ul className="flex justify-between items-center space-x-4">
-          {links.map(({ href, label }) => (
-            <li key={`${href}${label}`}>
-              <a href={href} className="btn-blue no-underline">
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </ul>
+    <nav className="pl-8 pr-4 pt-2 items-center justify-center flex">
+      <div className="w-full -mb-px flex items-center justify-center md:justify-start"></div>
+      <div className="flex-no-shrink flex">
+        <a href="https://github.com/kanbaru" className="pt-2 pr-1 transition duration-300 ease-in-out fill-current outline-none shadow-none"><span className="sr-only">GitHub</span>
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://twitter.com/emmaischic" className="pt-2 pl-2 pr-3 border-r-2 border-black dark:border-gray-500 transition duration-300 ease-in-out fill-current outline-none shadow-none "><span className="sr-only">Twitter</span>
+        <ion-icon name="logo-twitter"></ion-icon></a>
+        <DarkMode />
+      </div>
     </nav>
   )
 }

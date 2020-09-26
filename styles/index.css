@@ -1,18 +1,61 @@
-@tailwind base;
 
-/* Write your own custom base styles here */
+/* -------------------------------------------------------
+Variable font.
+Usage:
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Write you own custom component styles here */
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  html { font-family: "Inter", sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: "Inter var", sans-serif; }
+  }
+*/
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: "Regular";
+  font-display: swap;
+  src: url("/font-files/Inter-roman.var.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  font-display: swap;
+  src: url("/font-files/Inter-italic.var.woff2") format("woff2");
 }
 
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
+.fade-in {
+  animation: fadein 1s;
+}
+.fade-in-longer {
+  animation: fadein 4s;
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
 
-/* Your own custom utilities */
+.dark-flower {
+  -webkit-mask-image: radial-gradient(circle at 50% 60%, black 50%, rgba(0, 0, 0, 0.6) 50%);
+  mask-image: radial-gradient(circle at 50% 60%, black 50%, rgba(0, 0, 0, 0.6) 50%);
+}
+
+@tailwind base;
+@tailwind components;
+
+.title {
+  @apply text-5xl text-center;
+  color: #333;
+  line-height: 1.15;
+}
+
+ion-icon {
+  font-size: 1.5rem;
+}
+
+@tailwind utilities;

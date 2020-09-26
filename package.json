@@ -6,15 +6,21 @@
     "build": "next build",
     "start": "next start"
   },
+  "devDependencies": {
+    "@prefresh/next": "^0.3.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
   "dependencies": {
     "next": "latest",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
     "postcss-flexbugs-fixes": "4.2.1",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.7.4"
+    "preact": "^10.4.8",
+    "preact-render-to-string": "^5.1.4",
+    "swr": "^0.3.5",
+    "tailwindcss": "^1.7.4",
+    "tailwindcss-dark-mode": "^1.1.6",
+    "use-dark-mode": "^2.3.1"
   },
   "license": "MIT"
 }
