@@ -5,7 +5,7 @@ import Flower from '../components/flower'
 export default function Index({ serverinfo }) {
   return (
     <>
-      <div className="w-full flex flex-col h-screen justify-between transition duration-300 ease-in-out dark:transition dark:duration-300 dark:ease-in-out">
+      <div className="bg-white dark:bg-black text-black dark:text-gray-300 w-full flex flex-col h-screen justify-between transition duration-300 ease-in-out dark:transition dark:duration-300 dark:ease-in-out">
         <Nav />
         <div className="px-4 fade-in">
           <div className="lg:max-w-6xl lg:mx-auto">
