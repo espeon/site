@@ -1,5 +1,7 @@
 import React from 'react';
 import useSWR from "swr";
+import { FaLastfm, FaLastfmSquare } from "react-icons/fa"
+import { IoPause, IoPlay, IoStop } from "react-icons/io5"
 
 function fetcher(url) {
     return fetch(url).then(r => r.json());
@@ -21,13 +23,17 @@ export default function Music() {
 
     return (
         <>
-            {musictitle == null ? <div className="h-24 align-text-bottom"></div> :
-                <div className="bg-gray-300 dark:bg-gray-900 hover:bg-blue-200 dark-hover:bg-blue-900 shadow-2xl group rounded-lg p-2 w-auto fade-in relative transition duration-300 ease-in-out">
+            {musictitle == null ? "" :
+                <div className="bg-gray-300 dark:bg-gray-900 hover:bg-blue-200 dark-hover:bg-gray-800 shadow-2xl group rounded-lg p-2 w-auto fade-in relative transition duration-300 ease-in-out">
                     <div className="flex content-center">
-                        <div className="absolute pl-1 pt-1 fade-in text-black dark:text-gray-100 transition duration-75 ease-in-out">
+                        <div className="absolute pl-1 mt-1 fade-in text-gray-700 dark:text-gray-100 transition duration-75 ease-in-out flex bg-gray-300 dark:bg-gray-900 opacity-90 shadow" >
+                            <a href="https://last.fm/user/kanb/" className="pr-1 text-red-500 truncate transition duration-75 ease-in-out hover:text-blue-800 dark-hover:text-gray-500 shadow-2xl">
+                                <FaLastfm color="ba0000" />
+                            </a>
                             {data && data.recenttracks.track[0]["@attr"]
-                                ? <ion-icon name="play-outline"></ion-icon>
-                                : <ion-icon name="stop-outline"></ion-icon>}</div>
+                                ? <IoPlay />
+                                : <IoStop />}
+                        </div>
                         <img className="w-20 h-20 object-cover object-center rounded" src={cover["#text"]} height="10" alt="Album Pic" />
                         <div className="flex flex-col justify-center w-56 transition duration-75 ease-in-out">
                             <a href={data && data.recenttracks.track[0].url} className="pl-3 truncate transition duration-75 ease-in-out hover:text-blue-800 dark-hover:text-gray-500">{musictitle}</a>

@@ -14,17 +14,17 @@ export default function Index({ serverinfo }) {
                 <h1
                   className="font-bold text-3xl md:text-5xl leading-tight mb-4"
                 >
-                  hey, i'm emma!
+                  hey👋🏼, i'm emma!
                   </h1>
 
                 <p className="dark:text-indigo-200 text-indigo-900 mb-8">
                   welcome to my corner of the internet!<br />
               i do random things mainly with JavaScript and Rust.<br />
-              my socials are all in the top left, if you want to check them out.
+              my socials are all in the top right, if you want to check them out.
                   </p>
                 <h2 className="font-medium text-2xl mb-2">projects</h2>
                 <section className="bg-gray-300 dark:bg-gray-900 p-4 mb-2 rounded-lg">
-                  <a href="https://github.com/iriie/maki" className="flex">
+                  <a href="https://github.com/iriie/maki" className="flex" target="_blank">
                     <div className="font-light">iriie/</div>maki
                 </a>
                   <p>
@@ -32,7 +32,7 @@ export default function Index({ serverinfo }) {
                 </p>
                 </section>
                 <section className="bg-gray-300 dark:bg-gray-900 p-4 mb-2 rounded-lg">
-                  <a href="https://github.com/kanbaru/redir" className="flex">
+                  <a href="https://github.com/kanbaru/redir" className="flex" target="_blank">
                     <div className="font-light">kanbaru/</div>redir
                 </a>
                   <p>
@@ -40,7 +40,7 @@ export default function Index({ serverinfo }) {
                 </p>
                 </section>
                 <section className="bg-gray-300 dark:bg-gray-900 p-4 mb-2 rounded-lg">
-                  <a href="https://github.com/kanbaru/untitled-game" className="flex">
+                  <a href="https://github.com/kanbaru/untitled-game" className="flex" target="_blank">
                     <div className="font-light">kanbaru/</div>untitled-game
                 </a>
                   <p>
@@ -55,20 +55,9 @@ export default function Index({ serverinfo }) {
             </div>
           </div>
         </div>
-        <Footer url={serverinfo.url} region={serverinfo.region} className="static bottom-0 h-32 min-h-full" />
+        <Footer url="https://emma.iscute.dev" region="cla1" className="static bottom-0 h-32 min-h-full" />
       </div>
 
     </>
   )
-}
-
-Index.getInitialProps = async (context) => {
-  console.log("Region:", process.env.VERCEL_REGION)
-  let region = process.env.AWS_REGION
-  if (process.env.NOW_REGION) region = process.env.NOW_REGION
-  if (process.env.VERCEL_REGION) region = process.env.VERCEL_REGION
-  if (region == undefined) region = "dev1"
-  return {
-    serverinfo: { url: process.env.SITE, region: region }
-  }
 }

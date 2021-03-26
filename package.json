@@ -6,21 +6,23 @@
     "build": "next build",
     "start": "next start"
   },
-  "devDependencies": {
-    "@prefresh/next": "^0.3.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
-  },
   "dependencies": {
-    "next": "^9.5.3",
-    "postcss-flexbugs-fixes": "4.2.1",
-    "postcss-preset-env": "^6.7.0",
-    "preact": "^10.4.8",
+    "next": "latest",
+    "next-themes": "^0.0.10",
+    "preact": "latest",
     "preact-render-to-string": "^5.1.4",
+    "react-icons": "^4.0.0",
     "swr": "^0.3.5",
-    "tailwindcss": "^1.7.4",
-    "tailwindcss-dark-mode": "^1.1.6",
-    "use-dark-mode": "^2.3.1"
+    "tailwindcss-dark-mode": "^1.1.7",
+    "webpack": "^5.19.0"
+  },
+  "devDependencies": {
+    "@prefresh/next": "^1.4.1",
+    "autoprefixer": "10.0.2",
+    "postcss": "8.1.7",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "^2.0.1"
   },
   "license": "MIT"
 }

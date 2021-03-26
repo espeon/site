@@ -1,28 +1,33 @@
 import React from 'react';
-import useDarkMode from 'use-dark-mode';
+import { useTheme } from 'next-themes'
 
-const DarkModeToggle = () => {
-    const { value, toggle } = useDarkMode(false);
-    return <button onClick={toggle} className="pt-3 inline-flex items-center text-dark-500 hover:text-dark-800 md:bg-gray-50 md:hover:bg-gray-100 dark:text-white dark-hover:text-white md:dark:bg-dark-500 md:dark-hover:bg-dark-700 rounded p-3 transition duration-300 ease-in-out fill-current outline-none shadow-none" aria-label="Dark Mode">
-    { value ? <svg className="w-4 h-4 inline-block align-middle flex-shrink-0" viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true">
-      <g strokeWidth="2" fill="none" stroke="currentColor">
-        <circle cx="12" cy="12" r="5"></circle>
-        <path d="M12 1v2"></path>
-        <path d="M12 21v2"></path>
-        <path d="M4.22 4.22l1.42 1.42"></path>
-        <path d="M18.36 18.36l1.42 1.42"></path>
-        <path d="M1 12h2"></path>
-        <path d="M21 12h2"></path>
-        <path d="M4.22 19.78l1.42-1.42"></path>
-        <path d="M18.36 5.64l1.42-1.42"></path>
-      </g>
-    </svg> : <svg
-      className="w-4 h-4 inline-block align-middle flex-shrink-0"
-      aria-hidden="true"
-      viewBox="0 0 24 24">
-      <path fill="currentColor" d="M21.4,13.7C20.6,13.9,19.8,14,19,14c-5,0-9-4-9-9c0-0.8,0.1-1.6,0.3-2.4c0.1-0.3,0-0.7-0.3-1 c-0.3-0.3-0.6-0.4-1-0.3C4.3,2.7,1,7.1,1,12c0,6.1,4.9,11,11,11c4.9,0,9.3-3.3,10.6-8.1c0.1-0.3,0-0.7-0.3-1 C22.1,13.7,21.7,13.6,21.4,13.7z" />
-    </svg>}
+const themeSwitcher = () => {
+  const { theme, setTheme } = useTheme();
+  console.log(theme);
+  return <button
+  className="pt-3 inline-flex items-center text-gray-500 hover:text-gray-800 md:bg-gray-50 md:hover:bg-gray-100 dark:text-white dark-hover:text-white md:dark:bg-gray-500 md:dark-hover:bg-gray-700 rounded p-3 transition duration-300 ease-in-out fill-current outline-none shadow-none md:dark:hover" aria-label="Theme Switcher"
+  onClick={() => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }}>
+    { theme !== 'light' ? <svg className="w-4 h-4 inline-block align-middle flex-shrink-0" viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true">
+    <g strokeWidth="2" fill="none" stroke="currentColor">
+      <circle cx="12" cy="12" r="5"></circle>
+      <path d="M12 1v2"></path>
+      <path d="M12 21v2"></path>
+      <path d="M4.22 4.22l1.42 1.42"></path>
+      <path d="M18.36 18.36l1.42 1.42"></path>
+      <path d="M1 12h2"></path>
+      <path d="M21 12h2"></path>
+      <path d="M4.22 19.78l1.42-1.42"></path>
+      <path d="M18.36 5.64l1.42-1.42"></path>
+    </g>
+  </svg> : <svg
+    className="w-4 h-4 inline-block align-middle flex-shrink-0"
+    aria-hidden="true"
+    viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21.4,13.7C20.6,13.9,19.8,14,19,14c-5,0-9-4-9-9c0-0.8,0.1-1.6,0.3-2.4c0.1-0.3,0-0.7-0.3-1 c-0.3-0.3-0.6-0.4-1-0.3C4.3,2.7,1,7.1,1,12c0,6.1,4.9,11,11,11c4.9,0,9.3-3.3,10.6-8.1c0.1-0.3,0-0.7-0.3-1 C22.1,13.7,21.7,13.6,21.4,13.7z" />
+  </svg>}
   </button>
 }
 
-export default DarkModeToggle;
+export default themeSwitcher;
