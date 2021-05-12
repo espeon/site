@@ -19,7 +19,7 @@
   "devDependencies": {
     "@prefresh/next": "^1.4.1",
     "autoprefixer": "10.0.2",
-    "postcss": "8.1.7",
+    "postcss": "8.2.10",
     "react": "latest",
     "react-dom": "latest",
     "tailwindcss": "^2.0.1"
