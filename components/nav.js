@@ -14,7 +14,7 @@ export default function Nav() {
         <a href="https://twitter.com/emmaischic" target="_blank" className="pt-2 pl-2 pr-2 transition duration-300 ease-in-out fill-current outline-none shadow-none"><span className="sr-only">Twitter</span>
           <IoLogoTwitter size="1.5em" />
         </a>
-        <a href="https://twitch.com/emmaischic" target="_blank" className="pt-2 pl-2 pr-3 transition duration-300 ease-in-out fill-current outline-none shadow-none "><span className="sr-only">Twitter</span>
+        <a href="https://twitch.com/emmaic" target="_blank" className="pt-2 pl-2 pr-3 transition duration-300 ease-in-out fill-current outline-none shadow-none "><span className="sr-only">Twitter</span>
           <IoLogoTwitch size="1.5em" />
         </a>
         </div>
