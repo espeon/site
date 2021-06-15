@@ -8,7 +8,7 @@ function fetcher(url) {
 }
 
 export default function Music() {
-    const { data, error } = useSWR("/api/lastfm", fetcher, {
+    const { data, error } = useSWR("https://runkit.io/kanbaru/lastfm/branches/master", fetcher, {
         refreshInterval: 30000
     });
     if (error) return null
